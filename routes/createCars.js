@@ -13,7 +13,7 @@ router.post("/", async (req, res) => {
       return res.status(400).json({ message: "All fields are required." });
     }
 
-    // Create a new car document using Mongoose
+    // Create a new car document using MongooseF
     const newCar = new Car({
       make,
       model,
