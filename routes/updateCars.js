@@ -39,3 +39,42 @@ router.put("/:car_id", async (req, res) => {
 });
 
 export default router; // Export the router to be used in other parts of the application
+
+/**
+ * @swagger
+ * /api/cars/{id}:
+ *   put:
+ *     summary: Update a car by ID
+ *     tags: [Cars]
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         required: true
+ *         schema:
+ *           type: string
+ *         description: ID of the car to update
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             properties:
+ *               make:
+ *                 type: string
+ *               model:
+ *                 type: string
+ *               year:
+ *                 type: integer
+ *               color:
+ *                 type: string
+ *               price:
+ *                 type: number
+ *     responses:
+ *       200:
+ *         description: Car updated successfully
+ *       404:
+ *         description: Car not found
+ *       500:
+ *         description: Server error
+ */

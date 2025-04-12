@@ -25,3 +25,25 @@ router.delete('/:car_id', async (req, res) => {
 });
 
 export default router; // Export the router to be used in other parts of the application
+
+/**
+ * @swagger
+ * /api/cars/{id}:
+ *   delete:
+ *     summary: Delete a car by ID
+ *     tags: [Cars]
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         schema:
+ *           type: string
+ *         required: true
+ *         description: Car ID
+ *     responses:
+ *       200:
+ *         description: Car deleted successfully
+ *       404:
+ *         description: Car not found
+ *       500:
+ *         description: Server error
+ */

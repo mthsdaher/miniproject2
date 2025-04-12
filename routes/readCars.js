@@ -23,3 +23,16 @@ router.get("/", async (req, res) => {
 });
 
 export default router; // Export the router to be used in other parts of the application
+
+/**
+ * @swagger
+ * /api/cars:
+ *   get:
+ *     summary: Get all cars
+ *     tags: [Cars]
+ *     responses:
+ *       200:
+ *         description: List of cars
+ *       500:
+ *         description: Server error
+ */

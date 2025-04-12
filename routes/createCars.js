@@ -34,3 +34,41 @@ router.post("/", async (req, res) => {
 });
 
 export default router; // Export the router to be used in other parts of the application
+
+/**
+ * @swagger
+ * /api/cars:
+ *   post:
+ *     summary: Create a new car
+ *     tags: [Cars]
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             required:
+ *               - make
+ *               - model
+ *               - year
+ *               - color
+ *               - price
+ *             properties:
+ *               make:
+ *                 type: string
+ *               model:
+ *                 type: string
+ *               year:
+ *                 type: integer
+ *               color:
+ *                 type: string
+ *               price:
+ *                 type: number
+ *     responses:
+ *       201:
+ *         description: Car created successfully
+ *       400:
+ *         description: Missing required fields
+ *       500:
+ *         description: Server error
+ */
